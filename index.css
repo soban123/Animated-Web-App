@@ -11,6 +11,7 @@ html {
 body{
     margin: 0;
     width: 100%;
+    transition: all 1s ease;
 }
 
 
@@ -23,6 +24,7 @@ body{
 
 .header-top{
     height: 10%;
+    
 }
 
 
@@ -54,6 +56,9 @@ body{
     width: 100%;
 }
 
+.section2{
+    height: 100vh;
+}
 .fa-arrow-down{
    animation: arrowDown 2s alternate infinite;
 }
@@ -90,7 +95,7 @@ body{
 .gadgetsContainer{
     position: static;
     width: 100%;
-    height: 70%;
+    height: 80%;
 }
 
 
