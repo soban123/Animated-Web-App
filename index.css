@@ -102,7 +102,7 @@ body{
 .gadgets{
     color: white;
    font-size: 500px;
-   transition: all 0.4s linear;
+   transition: all 1s linear;
    position: absolute;
    top: 100px;
    animation: custom 20s ease infinite alternate;
@@ -258,3 +258,25 @@ body{
     color: rgb(54, 184, 235);
     font-size: 50px;
  }
+
+ .overlayImage{
+     background: red;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     font-size: 20px;
+     color: gray;
+     height: 0;
+     transition: all 1s linear;
+     cursor: pointer;
+     position: absolute;
+     bottom: 0;
+     opacity: 0;
+ }
+
+ .firstItem:hover .overlayImage{
+     opacity: 0.51;
+     height: 100%;
+
+ }
+
