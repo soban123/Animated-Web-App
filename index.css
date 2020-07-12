@@ -46,23 +46,30 @@ body{
 .arrowDown{
  
     color: rgb(214, 206, 206);
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     width: 100%;
 }
 
 .fa-arrow-down{
-   animation: arrowDown 1s alternate infinite;
+   animation: arrowDown 2s alternate infinite;
 }
 
 @keyframes arrowDown {
     0%{
-        transform: translateY(0px);
-        color: transparent;
+        transform: translateY(-10px);
+        color: rgb(255, 92, 214);
+
+
+    }
+    50%{
+        transform: translateY(-10px);
+        color: rgb(51, 96, 245);
 
     }
     100%{
         transform: translateY(10px);
+        color: transparent;
 
     }
 }
