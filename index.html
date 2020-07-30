@@ -16,10 +16,18 @@
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  
 
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
+       <div id="vid">
+      <video  preload="false"  autoPlay muted   loop>
+         <source src="clip.mp4" type="video/mp4">
+        
+       </video>
+      </div>
         
         <div class="row header">
+         
             <div class="col-md-12 header-top">
                 <span class="float-left logo">
                   <h2 class="logo"  data-aos="zoom-out-up"  
@@ -35,7 +43,7 @@
 
             
 
-            <div class="col-md-12 gadgetsContainer d-flex justify-content-center align-items-center">
+            <div class="col-md-12  gadgetsContainer d-flex justify-content-center align-items-center">
                   <div id="mobile" class="mobile"> <h2 class="mobile-text"> Digital product connecting technics & creativity </h2>  <div class="shadow-bottom" >   </div>  </div>
                   <div class="tablet">  </div>
                
@@ -171,6 +179,7 @@ AOS.init();
 document.addEventListener('aos:in', ({ detail }) => {
   console.log('animated in', detail);
 });
+
       </script>    
 </body>
 </html>
