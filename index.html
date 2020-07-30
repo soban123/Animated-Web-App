@@ -20,10 +20,13 @@
 
     <div class="container-fluid p-0">
        <div id="vid">
-      <video  preload="false"  autoPlay muted   loop>
+      <video   id="videos"  autoPlay muted   loop>
+
+         <source src="clip2.mp4"  type="video/mp4">
          <source src="clip.mp4" type="video/mp4">
         
        </video>
+       
       </div>
         
         <div class="row header">
@@ -135,27 +138,37 @@
 </div>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
-let Gadgetsopacity = 0 ; 
+let windowLevel = 0 ; 
 setInterval(function(){ 
-    document.getElementsByClassName('header')[0].style.setProperty( 'background' , 'linear-gradient(10deg, rgb(21, 8, 158), rgb(252, 76, 93)) 0% 0% / 200% 100%' )
-   
-    document.getElementById('mobile').style.setProperty('width' , '400px')
-    document.getElementById('mobile').style.setProperty('height' , '450px')
-   
- }, 2000);
 
- setInterval(function(){ 
-    document.getElementsByClassName('header')[0].style.setProperty( 'background' , 'linear-gradient(10deg, rgb(62, 54, 255), rgb(252, 76, 93)) 0% 0% / 200% 100%' )
+   if( windowLevel == 0  ){
+      document.getElementsByClassName('header')[0].style.setProperty( 'background' , 'linear-gradient(10deg, rgb(21, 8, 158), rgb(252, 76, 93)) 0% 0% / 200% 100%' )
+   
+   document.getElementById('mobile').style.setProperty('width' , '400px')
+   document.getElementById('mobile').style.setProperty('height' , '450px')
+   document.getElementById('videos').src = 'clip.mp4';
+
+   }
+   else if( windowLevel === 1 ){
+      document.getElementsByClassName('header')[0].style.setProperty( 'background' , 'linear-gradient(10deg, rgb(62, 54, 255), rgb(252, 76, 93)) 0% 0% / 200% 100%' )
     document.getElementById('mobile').style.setProperty('width' , '800px')
     document.getElementById('mobile').style.setProperty('height' , '400px')
- 
-}, 4000);
-setInterval(function(){ 
-    document.getElementsByClassName('header')[0].style.setProperty( 'background' , 'linear-gradient(10deg, rgb(4, 63, 111), rgb(252, 76, 93)) 0% 0% / 200% 100%' )
+   }
+   else if( windowLevel == 2 ){
+      document.getElementsByClassName('header')[0].style.setProperty( 'background' , 'linear-gradient(10deg, rgb(4, 63, 111), rgb(252, 76, 93)) 0% 0% / 200% 100%' )
     document.getElementById('mobile').style.setProperty('width' , '200px')
     document.getElementById('mobile').style.setProperty('height' , '400px')
- 
-}, 6000);
+    document.getElementById('videos').src = 'clip2.mp4';
+    windowLevel = 0 ; 
+
+   }
+
+   windowLevel++ ; 
+
+  
+ }, 4000);
+
+
 
 
 function slideOn(){
@@ -179,6 +192,10 @@ AOS.init();
 document.addEventListener('aos:in', ({ detail }) => {
   console.log('animated in', detail);
 });
+
+document.getElementById('videos').addEventListener('ended' , function(){
+   console.log('ended')
+})
 
       </script>    
 </body>
