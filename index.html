@@ -120,9 +120,7 @@
             </div>
             <div class="col-md-1 col-sm-2 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-slide="next">
                 <div class="carousel-nav-icon">
-                   <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
-                   </svg> -->
+                  
                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                 </div>
                 </a>
@@ -140,6 +138,7 @@
       <script>
 let windowLevel = 0 ; 
 setInterval(function(){ 
+
 
    if( windowLevel == 0  ){
       document.getElementsByClassName('header')[0].style.setProperty( 'background' , 'linear-gradient(10deg, rgb(21, 8, 158), rgb(252, 76, 93)) 0% 0% / 200% 100%' )
@@ -159,7 +158,7 @@ setInterval(function(){
     document.getElementById('mobile').style.setProperty('width' , '200px')
     document.getElementById('mobile').style.setProperty('height' , '400px')
     document.getElementById('videos').src = 'clip2.mp4';
-    windowLevel = 0 ; 
+    windowLevel = -1 ; 
 
    }
 
@@ -193,9 +192,7 @@ document.addEventListener('aos:in', ({ detail }) => {
   console.log('animated in', detail);
 });
 
-document.getElementById('videos').addEventListener('ended' , function(){
-   console.log('ended')
-})
+
 
       </script>    
 </body>
