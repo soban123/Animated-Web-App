@@ -36,12 +36,25 @@
                   <h2 class="logo"  data-aos="zoom-out-up"  
                      data-aos-delay="50">WEBAPP</h2>
                 </span>
+
                 <span  data-aos="zoom-out-down"  
-                     data-aos-delay="50" class="float-right icon-sidebar">
+                     data-aos-delay="50" class="float-right">
                         <i onclick="slideOn()" class="fa fa-align-justify justify"></i>
                 </span>
                     
-                    <div id="slider">  <i onclick="slideOff()" id="closeIcon" class="fa fa-times float-right closeIcon"></i>    </div>
+                    <div id="slider">  <i onclick="slideOff()" id="closeIcon" class="fa fa-times float-right closeIcon"></i>   
+                  
+                     <ul class="list">
+                        <li onclick="slideOff()"> <a href="#section1">  Home </a> </li>
+                        <li onclick="slideOff()"> <a href="#section2">  About </a> </li>
+                        <li onclick="slideOff()"> <a href="#section2">  Projects </a> </li>
+
+                     </ul>
+                  
+                  
+                  
+                  
+                  </div>
             </div>
 
             
@@ -71,34 +84,53 @@
                 
                    <div class="col-12">
                       <!--Start carousel-->
+                      <h1 class="heading-projects"> Our Projects </h1>
                       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
              
                          <div class="carousel-inner">
                             <div class="carousel-item active">
+
                                <div class="row">
-                                  <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun04.jpg');" class="col-12 col-md d-flex  p-0 firstItem align-items-center justify-content-center ">
-                                    <div class="overlayImage "> <h1 class="my-auto"> Hello </h1>  </div>
+                                  <div class="card card1" style="width: 23rem;">
+                                    <img class="card-img-top" src="https://binaria.com/static/091832b3da5340ee19f1693ff4bb294d/18a45/binaria-proyectos-shapesoflife.png" alt="Card image cap">
+                                    <div class="overlay "> <h1 > Mobile Apps </h1>  </div>
                                   </div>
-                                  <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex  p-0 firstItem align-items-center justify-content-center ">
-                                    <div class="overlayImage "> <h1 class="my-auto"> Hello </h1>  </div>
+
+                                  <div class="card card2" style="width: 23rem;">
+                                    <img class="card-img-top" src="https://binaria.com/static/056e84e906f1af68a98ed3e535cadac4/18a45/binaria-proyectos-olyseum.png" alt="Card image cap">
+                                    <div class="overlay "> <h1 > Laptop Apps </h1>  </div>
                                   </div>
-                                  <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+
+                                  <div class="card card3" style="width: 23rem;">
+                                    <img class="card-img-top" src="https://binaria.com/static/c2b92081460ce106ec31021cf7d82d3c/193f6/binaria-proyectos-rocacocinas.png" alt="Card image cap">
+                                    <div class="overlay "> <h1 > Desktop Apps </h1>  </div>
                                   </div>
-                                  <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun05.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
-                                     <h3>Hi.</h3>
-                                  </div>
+
+                                
+
                                </div>
                             </div>
+                            
                             <div class="carousel-item">
-                               <div class="row">
-                                  <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun01.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+
+                              <div class="row">
+                                 <div class="card card3" style="width: 23rem;">
+                                    <img class="card-img-top" src="https://binaria.com/static/ee542ecfe381b4ccc1e71c184d8755ff/193f6/binaria-proyectos-ipm.png" alt="Card image cap">
+                                    <div class="overlay "> <h1 > Laptop Security </h1>  </div>
                                   </div>
-                                  <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun03.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+
+                                  <div class="card card2" style="width: 23rem;">
+                                    <img class="card-img-top" src="https://binaria.com/static/da8cd473917cbbfe5e2b53b4e177103a/193f6/binaria-proyectos-baxi.png" alt="Card image cap">
+                                    <div class="overlay "> <h1 > Mobile Design </h1>  </div>
                                   </div>
-                                  <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun06.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+
+                                  <div class="card card1" style="width: 23rem;">
+                                    <img class="card-img-top" src="https://binaria.com/static/456a17358effd82550ebf66d26f5e3a5/18a45/binaria-proyectos-solerpalau.png" alt="Card image cap">
+                                    <div class="overlay "> <h1 > Tablet Apps </h1>  </div>
                                   </div>
-                               </div>
-                            </div>
+
+                              </div>
+
                          </div>
                       </div>
                       <!--End carousel-->
@@ -173,6 +205,7 @@ setInterval(function(){
 function slideOn(){
     console.log(document.getElementById('slider'))
     document.getElementById('slider').style.setProperty('width' ,'100%')
+    document.getElementById('slider').style.setProperty('display' ,'block')
     document.getElementById('closeIcon').style.setProperty('display' , 'block')
 }
 
@@ -182,6 +215,8 @@ function slideOff(){
     document.getElementById('closeIcon').style.setProperty('display' , 'none')
 
     document.getElementById('slider').style.setProperty('width' ,'0')
+    document.getElementById('slider').style.setProperty('display' ,'none')
+
 }
 
 
